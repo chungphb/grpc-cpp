@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "sample.grpc";
+
+package sample;
+
+service SampleService {
+    rpc SampleMethod (SampleRequest) returns (SampleResponse) {}
+}
+
+message SampleRequest {
+    string request_sample_field = 1;
+}
+
+message SampleResponse {
+    string response_sample_field = 1;
+}
