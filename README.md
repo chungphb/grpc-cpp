@@ -20,16 +20,24 @@ $ make install
 $ popd
 ```
 
-**Note:** When building the `cpp/helloworld` example, we might encounter the `fatal error: absl/synchronization/mutex.h: 
-No such file or directory`. This can be fixed by copying the absl folder from `grpc/third_party/abseil-cpp/absl` to `/usr/
-local/include/`:
+When building the `cpp/helloworld` example, you might encounter the `fatal error: absl/synchronization/mutex.h: 
+No such file or directory` error. This could be fixed by copying the absl folder from `grpc/third_party/abseil-cpp/absl` 
+to `/usr/local/include/`.
 
 ```
 $ (sudo) cp -r grpc/third_party/abseil-cpp/absl /usr/local/include/
 ```
 
 ## Example: Sample service
+
 ### Define a service
+
+#### Instruction
+Define a service using protocol buffers IDL in a `.proto` file.
+
+#### Example
+[sample.proto](protos/sample.proto)
+
 ```
 syntax = "proto3";
 
@@ -51,10 +59,43 @@ message SampleResponse {
 ```
 
 ### Generate gRPC code
-* For client
-  * `$ protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/sample.proto`
-  * **Example:** $ protoc -I=protobuf/ --cpp_out=. protobuf/sample.proto
-    
-* For server
-  * `$ protoc -I=$SRC_DIR --grpc_out=$DST_DIR --plugin=protoc-gen-grpc=/usr/local/bin/grpc_cpp_plugin $SRC_DIR/sample.proto`
-  * **Example:** $ protoc -I=protobuf/ --grpc_out=. --plugin=protoc-gen-grpc=/usr/local/bin/grpc_cpp_plugin protobuf/sample.proto
+
+#### Instruction
+Use the protocol buffer compiler `protoc` to generate client and server code:
+```
+$ protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/sample.proto
+$ protoc -I=$SRC_DIR --grpc_out=$DST_DIR --plugin=protoc-gen-grpc=/usr/local/bin/grpc_cpp_plugin $SRC_DIR/sample.proto
+```
+where:
+* `SRC_DIR`: The source directory, or the directory contains the `.proto` file.
+* `DST_DIR`: The destination directory, or the directory contains the `.pb.h`, `.pb.cc`, `.grpc.pb.h` and `.grpc.pb.cc` newly generated files.
+
+#### Example
+With `SRC_DIR = protos/` and `DST_DIR = sample/`:
+```
+$ protoc -I=protos/ --cpp_out=sample/ protos/sample.proto
+$ protoc -I=protos/ --grpc_out=sample/ --plugin=protoc-gen-grpc=/usr/local/bin/grpc_cpp_plugin protos/sample.proto
+```
+
+#### Note
+These files should be generated automatically by the CMake's `add_custom_command` command and should not be included in the actual project.
+
+### Write a client
+
+#### Instruction
+1. Create a channel.
+2. Create a stub.
+3. Make a unary RPC.
+4. Check returned status and response.
+
+#### Example
+[sample_client.cc](sample/sample_client.cc)
+
+### Write a server
+
+#### Instruction
+1. Implement the service interface.
+2. Build a server exporting the service.
+
+#### Example
+[sample_server.cc](sample/sample_server.cc)
