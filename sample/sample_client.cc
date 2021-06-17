@@ -19,13 +19,14 @@ public:
         request.set_request_sample_field(request_sample_field);
         SampleResponse response;
         ClientContext context;
+        Status status;
 
-        Status status = _stub->SampleMethod(&context, request, &response);
+        status = _stub->SampleMethod(&context, request, &response);
         if (status.ok()) {
             return response.response_sample_field();
         } else {
             std::cerr << status.error_code() << ": " << status.error_message() << std::endl;
-            return "RPC Failed";
+            return "RPC failed";
         }
     }
 

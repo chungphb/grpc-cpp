@@ -26,7 +26,7 @@ target_link_libraries(sample_grpc_proto
         ${_REFLECTION}
         ${_GRPC_GRPCPP})
 
-foreach(_target sample_client sample_server)
+foreach(_target sample_client sample_server sample_async_client sample_async_server)
     add_executable(${_target} "${_target}.cc")
     target_link_libraries(${_target}
             sample_grpc_proto
