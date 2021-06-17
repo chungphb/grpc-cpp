@@ -38,6 +38,7 @@ public:
             if (status.ok()) {
                 return response.response_sample_field();
             } else {
+                std::cerr << status.error_code() << ": " << status.error_message() << std::endl;
                 return "RPC failed";
             }
         } else {
@@ -79,11 +80,12 @@ public:
         while (_queue.Next(&tag, &ok)) {
             auto* response_handler = static_cast<ResponseHandler*>(tag);
             if (ok) {
-                std::cout << "Client received: ";
                 if (response_handler->status.ok()) {
-                    std::cout << response_handler->response.response_sample_field() << std::endl;
+                    std::cout << "Client received: " << response_handler->response.response_sample_field() << std::endl;
                 } else {
-                    std::cout << "RPC failed" << std::endl;
+                    auto status = response_handler->status;
+                    std::cerr << status.error_code() << ": " << status.error_message() << std::endl;
+                    std::cout << "Client received: RPC failed" << std::endl;
                 }
                 delete response_handler;
             } else {

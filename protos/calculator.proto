@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+option java_package = "calculator.grpc";
+
+package calculator;
+
+service Calculator {
+    rpc Add (AddRequest) returns (AddResponse) {}
+
+    rpc Sub (SubRequest) returns (SubResponse) {}
+
+    rpc Mul (MulRequest) returns (MulResponse) {}
+
+    rpc Div (DivRequest) returns (DivResponse) {}
+
+    rpc Mod (ModRequest) returns (ModResponse) {}
+}
+
+message AddRequest {
+    int32 addend_1 = 1;
+    int32 addend_2 = 2;
+}
+
+message AddResponse {
+    int64 sum = 1;
+}
+
+message SubRequest {
+    int32 minuend = 1;
+    int32 subtrahend = 2;
+}
+
+message SubResponse {
+    int64 difference = 1;
+}
+
+message MulRequest {
+    int32 multiplicand = 1;
+    int32 multiplier = 2;
+}
+
+message MulResponse {
+    int64 product = 1;
+}
+
+message DivRequest {
+    int32 dividend = 1;
+    int32 divisor = 2;
+}
+
+message DivResponse {
+    int64 quotient = 1;
+}
+
+message ModRequest {
+    int32 dividend = 1;
+    int32 divisor = 2;
+}
+
+message ModResponse {
+    int64 result = 1;
+}

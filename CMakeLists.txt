@@ -28,3 +28,5 @@ else()
 endif()
 
 add_subdirectory(sample)
+
+add_subdirectory(calculator)
