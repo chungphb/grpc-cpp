@@ -26,7 +26,7 @@ target_link_libraries(calculator_grpc_proto
         ${_REFLECTION}
         ${_GRPC_GRPCPP})
 
-foreach(_target calculator_client calculator_server)
+foreach(_target calculator_client calculator_server calculator_async_client calculator_async_server)
     add_executable(${_target} "${_target}.cc")
     target_link_libraries(${_target}
             calculator_grpc_proto
