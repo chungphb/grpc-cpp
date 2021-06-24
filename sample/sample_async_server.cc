@@ -23,20 +23,22 @@ public:
     void Run() {
         std::string server_address{"localhost:2511"};
 
+        // Build server
         ServerBuilder builder;
         builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
         builder.RegisterService(&_service);
-
         _queue = builder.AddCompletionQueue();
         _server = builder.BuildAndStart();
+        
+        // Run server
         std::cout << "Server listening on " << server_address << std::endl;
         HandleRPCs();
     }
 
 private:
-    class RequestHandler {
+    class CallData {
     public:
-        RequestHandler(SampleService::AsyncService* service, ServerCompletionQueue* queue)
+        CallData(SampleService::AsyncService* service, ServerCompletionQueue* queue)
                 : _service{service}, _queue{queue}, _responder{&_context}, _status{CallStatus::CREATE} {
             Proceed();
         }
@@ -49,7 +51,7 @@ private:
                     break;
                 }
                 case CallStatus::PROCESS: {
-                    new RequestHandler{_service, _queue};
+                    new CallData{_service, _queue};
                     _response.set_response_sample_field("Hello " + _request.request_sample_field());
                     _status = CallStatus::FINISH;
                     _responder.Finish(_response, Status::OK, this);
@@ -75,12 +77,12 @@ private:
     };
 
     void HandleRPCs() {
-        new RequestHandler{&_service, _queue.get()};
+        new CallData{&_service, _queue.get()};
         void* tag;
         bool ok;
         while (true) {
             if (_queue->Next(&tag, &ok) && ok) {
-                static_cast<RequestHandler*>(tag)->Proceed();
+                static_cast<CallData*>(tag)->Proceed();
             } else {
                 std::cerr << "Something went wrong" << std::endl;
                 abort();

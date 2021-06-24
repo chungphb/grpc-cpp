@@ -19,11 +19,15 @@ public:
 
     void Run() {
         std::string server_address{"localhost:2511"};
+
+        // Build server
         ServerBuilder builder;
         builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
         builder.RegisterService(&_service);
         _queue = builder.AddCompletionQueue();
         _server = builder.BuildAndStart();
+
+        // Run server
         std::cout << "Server listening on " << server_address << std::endl;
         HandleRPCs();
     }
@@ -96,7 +100,7 @@ private:
             Proceed();
         }
 
-        void Proceed() {
+        void Proceed() override {
             switch (_status) {
                 case CallStatus::CREATE: {
                     _status = CallStatus::PROCESS;
@@ -132,7 +136,7 @@ private:
             Proceed();
         }
 
-        void Proceed() {
+        void Proceed() override {
             switch (_status) {
                 case CallStatus::CREATE: {
                     _status = CallStatus::PROCESS;
@@ -168,7 +172,7 @@ private:
             Proceed();
         }
 
-        void Proceed() {
+        void Proceed() override {
             switch (_status) {
                 case CallStatus::CREATE: {
                     _status = CallStatus::PROCESS;
@@ -204,7 +208,7 @@ private:
             Proceed();
         }
 
-        void Proceed() {
+        void Proceed() override {
             switch (_status) {
                 case CallStatus::CREATE: {
                     _status = CallStatus::PROCESS;

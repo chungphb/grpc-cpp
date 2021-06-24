@@ -134,8 +134,12 @@ public:
         void* tag;
         bool ok = false;
         while (_queue.Next(&tag, &ok)) {
-            std::string err;
             auto* tag_ptr = static_cast<Tag*>(tag);
+            if (!ok || !tag_ptr) {
+                std::cerr << "Something went wrong" << std::endl;
+                abort();
+            }
+            std::string err;
             switch (tag_ptr->id) {
                 case MessageID::ADD: {
                     auto* call = static_cast<AsyncClientCall<AddRequest, AddResponse>*>(tag_ptr->call);
@@ -222,7 +226,7 @@ public:
                             err = std::to_string(call->status.error_code()) + ": " + call->status.error_message();
                         }
                     } else {
-                        err = "Something went wrong";
+                        err = "A client call was deleted";
                     }
                     delete call;
                     break;
