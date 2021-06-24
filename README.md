@@ -1,6 +1,11 @@
-# Basic gRPC
-## Install gRPC
-```
+# gRPC C++
+## Installing
+
+### How to install
+
+To install **gRPC**, run the following commands:
+
+```bash
 $ export INSTALL_DIR=$HOME/.local
 $ mkdir -p $INSTALL_DIR
 $ export PATH="$INSTALL_DIR/bin:$PATH"
@@ -20,25 +25,25 @@ $ make install
 $ popd
 ```
 
-When building the `cpp/helloworld` example, you might encounter the `fatal error: absl/synchronization/mutex.h: 
-No such file or directory` error. This could be fixed by copying the absl folder from `grpc/third_party/abseil-cpp/absl` 
-to `/usr/local/include/`.
+### Note
+
+If you encounter the `fatal error: absl/synchronization/mutex.h: 
+No such file or directory` error when building the [Hello world](https://github.com/grpc/grpc/tree/master/examples/cpp/helloworld) example, simply fix it by copying the `absl` directory from `grpc/third_party/abseil-cpp/absl` 
+to `/usr/local/include/`:
 
 ```
 $ (sudo) cp -r grpc/third_party/abseil-cpp/absl /usr/local/include/
 ```
 
-## Example: Sample service
+## Working with gRPC
 
-### Define a service
+### How to define a service
 
 #### Instruction
-Define a service using protocol buffers IDL in a `.proto` file.
+Define a service in a `.proto` file using the **Interface Definition Language (IDL)** from **Protocol Buffers**.
 
-#### Example
-[sample.proto](protos/sample.proto)
-
-```
+#### Example: [Sample service](protos/sample.proto)
+```protobuf
 syntax = "proto3";
 
 option java_package = "sample.grpc";
@@ -58,29 +63,43 @@ message SampleResponse {
 }
 ```
 
-### Generate gRPC code
+#### Example: [Calculator service](protos/calculator.proto)
+
+#### Note
+
+### How to generate gRPC code
 
 #### Instruction
 Use the protocol buffer compiler `protoc` to generate client and server code:
-```
+```bash
 $ protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/sample.proto
 $ protoc -I=$SRC_DIR --grpc_out=$DST_DIR --plugin=protoc-gen-grpc=/usr/local/bin/grpc_cpp_plugin $SRC_DIR/sample.proto
 ```
 where:
 * `SRC_DIR`: The source directory, or the directory contains the `.proto` file.
-* `DST_DIR`: The destination directory, or the directory contains the `.pb.h`, `.pb.cc`, `.grpc.pb.h` and `.grpc.pb.cc` newly generated files.
+* `DST_DIR`: The destination directory, or the directory contains the `.pb.h`, `.pb.cc`, `.grpc.pb.h` and `.grpc.pb.cc` files.
 
-#### Example
+#### Example: Sample
 With `SRC_DIR = protos/` and `DST_DIR = sample/`:
-```
+```bash
 $ protoc -I=protos/ --cpp_out=sample/ protos/sample.proto
 $ protoc -I=protos/ --grpc_out=sample/ --plugin=protoc-gen-grpc=/usr/local/bin/grpc_cpp_plugin protos/sample.proto
 ```
 
-#### Note
-These files should be generated automatically by the CMake's `add_custom_command` command and should not be included in the actual project.
+#### Example: Calculator
 
-### Write a client
+With `SRC_DIR = protos/` and `DST_DIR = calculator/`:
+
+```bash
+$ protoc -I=protos/ --cpp_out=calculator/ protos/calculator.proto
+$ protoc -I=protos/ --grpc_out=calculator/ --plugin=protoc-gen-grpc=/usr/local/bin/grpc_cpp_plugin protos/calculator.proto
+```
+
+#### Note
+
+The `.pb.h`, `.pb.cc`, `.grpc.pb.h` and `.grpc.pb.cc` files could be generated automatically by the CMake's `add_custom_command` command and should not be included in the actual project. See also: [Sample CMakeLists.txt](sample/CMakeLists.txt), [Calculator CMakeLists.txt](calculator/CMakeLists.txt).
+
+### How to write a client
 
 #### Instruction
 1. Create a channel.
@@ -88,14 +107,48 @@ These files should be generated automatically by the CMake's `add_custom_command
 3. Make a unary RPC.
 4. Check returned status and response.
 
-#### Example
-[sample_client.cc](sample/sample_client.cc)
+#### Example: [Sample client](sample/sample_client.cc)
+#### Example: [Calculator client](calculator/calculator_client.cc)
 
-### Write a server
+#### Note
+
+### How to write a server
 
 #### Instruction
 1. Implement the service interface.
 2. Build a server exporting the service.
 
-#### Example
-[sample_server.cc](sample/sample_server.cc)
+#### Example: [Sample server](sample/sample_server.cc)
+#### Example: [Calculator server](calculator/calculator_server.cc)
+
+#### Note
+
+### How to write an async client
+
+#### Instruction
+
+1. Create a channel.
+2. Create a stub.
+3. Initiate the RPC and bind it to a `CompletionQueue`.
+4. Request to update the response and the call status upon completion of the RPC with a unique tag.
+5. Wait for the completion queue to return the next tag.
+
+#### Example: [Sample async client](sample/sample_async_client.cc)
+
+#### Example: [Calculator async client](calculator/calculator_async_client.cc)
+
+#### Note
+
+### How to write an async server
+
+#### Instruction
+
+1. Build a server exporting the async service.
+2. Request an RPC with a unique tag.
+3. Wait for the completion queue to return the next tag.
+
+#### Example: [Sample async server](sample/sample_async_server.cc)
+
+#### Example: [Calculator async server](calculator/calculator_async_server.cc)
+
+#### Note
