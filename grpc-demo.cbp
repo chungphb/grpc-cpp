@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="grpc-demo"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\protobuf\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\grpc\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\absl\;CMake Files\sample\;CMake Files\calculator\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sample_grpc_proto">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/sample/libsample_grpc_proto.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/sample"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 sample_grpc_proto"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sample_grpc_proto/fast">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/sample/libsample_grpc_proto.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/sample"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 sample_grpc_proto/fast"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sample_client">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/sample/sample_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/sample"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 sample_client"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sample_client/fast">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/sample/sample_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/sample"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 sample_client/fast"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sample_server">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/sample/sample_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/sample"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 sample_server"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sample_server/fast">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/sample/sample_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/sample"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 sample_server/fast"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sample_async_client">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/sample/sample_async_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/sample"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 sample_async_client"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sample_async_client/fast">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/sample/sample_async_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/sample"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 sample_async_client/fast"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sample_async_server">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/sample/sample_async_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/sample"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 sample_async_server"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sample_async_server/fast">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/sample/sample_async_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/sample"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/sample/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 sample_async_server/fast"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/sample/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="calculator_grpc_proto">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/calculator/libcalculator_grpc_proto.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 calculator_grpc_proto"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="calculator_grpc_proto/fast">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/calculator/libcalculator_grpc_proto.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 calculator_grpc_proto/fast"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="calculator_client">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/calculator/calculator_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 calculator_client"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="calculator_client/fast">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/calculator/calculator_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 calculator_client/fast"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="calculator_server">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/calculator/calculator_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 calculator_server"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="calculator_server/fast">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/calculator/calculator_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 calculator_server/fast"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="calculator_async_client">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/calculator/calculator_async_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 calculator_async_client"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="calculator_async_client/fast">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/calculator/calculator_async_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 calculator_async_client/fast"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="calculator_async_server">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/calculator/calculator_async_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 calculator_async_server"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="calculator_async_server/fast">
+				<Option output="/Users/qinshen/go/src/grpc-cpp/calculator/calculator_async_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../api/cpp/include"/>
+					<Add directory="/Users/qinshen/go/src/grpc-cpp/calculator/../../grpc/include"/>
+					<Add directory="/usr/local/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 calculator_async_server/fast"/>
+					<CompileFile command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -f &quot;/Users/qinshen/go/src/grpc-cpp/calculator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/api/cpp/include/protos/calculator/v1/calculator.grpc.pb.cc">
+			<Option target="calculator_grpc_proto"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/api/cpp/include/protos/calculator/v1/calculator.grpc.pb.h">
+			<Option target="calculator_grpc_proto"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/api/cpp/include/protos/calculator/v1/calculator.pb.cc">
+			<Option target="calculator_grpc_proto"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/api/cpp/include/protos/calculator/v1/calculator.pb.h">
+			<Option target="calculator_grpc_proto"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/api/cpp/include/protos/sample/v1/sample.grpc.pb.cc">
+			<Option target="sample_grpc_proto"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/api/cpp/include/protos/sample/v1/sample.grpc.pb.h">
+			<Option target="sample_grpc_proto"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/api/cpp/include/protos/sample/v1/sample.pb.cc">
+			<Option target="sample_grpc_proto"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/api/cpp/include/protos/sample/v1/sample.pb.h">
+			<Option target="sample_grpc_proto"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/calculator/calculator_async_client.cc">
+			<Option target="calculator_async_client"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/calculator/calculator_async_server.cc">
+			<Option target="calculator_async_server"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/calculator/calculator_client.cc">
+			<Option target="calculator_client"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/calculator/calculator_server.cc">
+			<Option target="calculator_server"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/sample/sample_async_client.cc">
+			<Option target="sample_async_client"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/sample/sample_async_server.cc">
+			<Option target="sample_async_server"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/sample/sample_client.cc">
+			<Option target="sample_client"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/sample/sample_server.cc">
+			<Option target="sample_server"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/../../../../../usr/local/lib/cmake/protobuf/protobuf-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/../../../../../usr/local/lib/cmake/protobuf/protobuf-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/../../../../../usr/local/lib/cmake/protobuf/protobuf-module.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/../../../../../usr/local/lib/cmake/protobuf/protobuf-options.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/../../../../../usr/local/lib/cmake/protobuf/protobuf-targets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/../../../../../usr/local/lib/cmake/protobuf/protobuf-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/../../../../../usr/local/lib/cmake/grpc/gRPCConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/../../../../../usr/local/lib/cmake/grpc/gRPCConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/../../../../../usr/local/lib/cmake/grpc/gRPCTargets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/../../../../../usr/local/lib/cmake/grpc/gRPCTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/../../../../../usr/local/lib/cmake/absl/abslConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\absl\"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/../../../../../usr/local/lib/cmake/absl/abslConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\absl\"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/../../../../../usr/local/lib/cmake/absl/abslTargets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\absl\"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/../../../../../usr/local/lib/cmake/absl/abslTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\absl\"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/sample/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\sample\"/>
+		</Unit>
+		<Unit filename="/Users/qinshen/go/src/grpc-cpp/calculator/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\calculator\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

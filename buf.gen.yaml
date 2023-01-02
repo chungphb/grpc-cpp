@@ -1,0 +1,19 @@
+
+version: v1
+managed:
+  enabled: true
+  go_package_prefix:
+    default: github.com/tsingson/grpc-demo
+plugins:
+  - name: go
+    out: api/go
+    opt: paths=source_relative
+  - name: connect-go
+    out: api/go
+    opt: paths=source_relative
+  - plugin: buf.build/protocolbuffers/cpp
+    out: api/cpp/include
+  - plugin: buf.build/grpc/cpp
+    out: api/cpp/include
+
+

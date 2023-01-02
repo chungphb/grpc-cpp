@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-option java_package = "calculator.grpc";
+option java_package = "calculator.v1.grpc";
 
-package calculator;
+package calculator.v1;
 
 service Calculator {
     rpc Add (AddRequest) returns (AddResponse) {}

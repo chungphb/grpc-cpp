@@ -1,4 +1,4 @@
-#include "sample.grpc.pb.h"
+#include "protos/sample/v1/sample.grpc.pb.h"
 #include <grpc++/grpc++.h>
 #include <memory>
 #include <iostream>
@@ -6,15 +6,15 @@
 using grpc::Channel;
 using grpc::ClientContext;
 using grpc::Status;
-using sample::SampleRequest;
-using sample::SampleResponse;
-using sample::SampleService;
+using sample::v1::SampleRequest;
+using sample::v1::SampleResponse;
+using sample::v1::SampleService;
 
 class SampleClient {
 public:
     SampleClient(std::shared_ptr<Channel> channel) : _stub{SampleService::NewStub(channel)} {}
 
-    std::string SampleMethod(const std::string& request_sample_field) {
+    std::string Sample(const std::string& request_sample_field) {
         // Prepare request
         SampleRequest request;
         request.set_request_sample_field(request_sample_field);
@@ -23,7 +23,7 @@ public:
         SampleResponse response;
         ClientContext context;
         Status status;
-        status = _stub->SampleMethod(&context, request, &response);
+        status = _stub->Sample(&context, request, &response);
 
         // Handle response
         if (status.ok()) {
@@ -42,7 +42,7 @@ int main(int argc, char** argv) {
     std::string server_address{"localhost:2510"};
     SampleClient client{grpc::CreateChannel(server_address, grpc::InsecureChannelCredentials())};
     std::string request_sample_field{"world"};
-    std::string response_sample_field = client.SampleMethod(request_sample_field);
+    std::string response_sample_field = client.Sample(request_sample_field);
     std::cout << "Client received: " << response_sample_field << std::endl;
     return 0;
 }

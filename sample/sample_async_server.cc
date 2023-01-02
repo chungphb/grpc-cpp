@@ -1,4 +1,4 @@
-#include <sample.grpc.pb.h>
+#include <protos/sample/v1/sample.grpc.pb.h>
 #include <grpc++/grpc++.h>
 #include <memory>
 #include <iostream>
@@ -9,9 +9,9 @@ using grpc::ServerBuilder;
 using grpc::ServerCompletionQueue;
 using grpc::ServerContext;
 using grpc::Status;
-using sample::SampleRequest;
-using sample::SampleResponse;
-using sample::SampleService;
+using sample::v1::SampleRequest;
+using sample::v1::SampleResponse;
+using sample::v1::SampleService;
 
 class ServerImpl final {
 public:
@@ -47,7 +47,7 @@ private:
             switch (_status) {
                 case CallStatus::CREATE: {
                     _status = CallStatus::PROCESS;
-                    _service->RequestSampleMethod(&_context, &_request, &_responder, _queue, _queue, this);
+                    _service->RequestSample(&_context, &_request, &_responder, _queue, _queue, this);
                     break;
                 }
                 case CallStatus::PROCESS: {

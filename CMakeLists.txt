@@ -1,9 +1,17 @@
 cmake_minimum_required(VERSION 3.19)
-project(basic_grpc)
+
+#if(NOT TARGET spdlog)
+#    # Stand-alone build
+#    find_package(spdlog REQUIRED)
+#endif()
+
+
+ project(grpc-demo)
 
 set(CMAKE_CXX_STANDARD 14)
 
-find_package(Threads)
+
+find_package(Threads REQUIRED)
 
 set(protobuf_MODULE_COMPATIBLE TRUE)
 find_package(Protobuf CONFIG REQUIRED)

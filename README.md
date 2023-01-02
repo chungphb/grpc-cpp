@@ -42,7 +42,7 @@ $ (sudo) cp -r grpc/third_party/abseil-cpp/absl /usr/local/include/
 #### Instruction
 Define a service in a `.proto` file using the **Interface Definition Language (IDL)** from **Protocol Buffers**.
 
-#### Example: [Sample service](protos/sample.proto)
+#### Example: [Sample service](protos/sample/v1/sample.proto)
 ```protobuf
 syntax = "proto3";
 
@@ -63,7 +63,7 @@ message SampleResponse {
 }
 ```
 
-#### Example: [Calculator service](protos/calculator.proto)
+#### Example: [Calculator service](protos/calculator/v1/calculator.proto)
 
 #### Note
 

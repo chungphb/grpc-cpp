@@ -1,11 +1,10 @@
 syntax = "proto3";
 
-option java_package = "sample.grpc";
-
-package sample;
+option java_package = "sample.v1.grpc";
+package sample.v1;
 
 service SampleService {
-    rpc SampleMethod (SampleRequest) returns (SampleResponse) {}
+    rpc Sample (SampleRequest) returns (SampleResponse) {}
 }
 
 message SampleRequest {

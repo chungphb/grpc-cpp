@@ -1,11 +1,22 @@
-#include <calculator.grpc.pb.h>
+#include <protos/calculator/v1/calculator.grpc.pb.h>
 #include <grpc++/grpc++.h>
 #include <memory>
 #include <thread>
 #include <iostream>
 
 using namespace grpc;
-using namespace calculator;
+using namespace calculator::v1;
+using calculator::v1::AddRequest;
+using calculator::v1::AddResponse;
+using calculator::v1::SubRequest;
+using calculator::v1::SubResponse;
+using calculator::v1::MulRequest;
+using calculator::v1::MulResponse;
+using calculator::v1::DivRequest;
+using calculator::v1::DivResponse;
+using calculator::v1::ModRequest;
+using calculator::v1::ModResponse;
+using calculator::v1::Calculator;
 
 enum class MessageID : uint8_t {
     ADD = 0, SUB = 1, MUL = 2, DIV = 3, MOD = 4
